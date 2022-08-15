@@ -157,8 +157,8 @@ def invoke_configure(build_folder, install_folder, root_folder, target,
     ]
     if host_arch:
         configure += [
-            'CFLAGS=-O2 -march=%s -mtune=%s' % (host_arch, host_arch),
-            'CXXFLAGS=-O2 -march=%s -mtune=%s' % (host_arch, host_arch)
+            'CFLAGS=-O2 -march=armv8.2-a -mtune=cortex-a75.cortex-a55',
+            'CXXFLAGS=-O2 -march=armv8.2-a -mtune=cortex-a75.cortex-a55'
         ]
     else:
         configure += ['CFLAGS=-O2', 'CXXFLAGS=-O2']
